@@ -1,4 +1,8 @@
-import KPIChart2 from './KPI/kpichart2.jsx'
+import Table1 from './Tables/table1.jsx'
+import Table2 from './Tables/table2.jsx'
+import Table3 from './Tables/table3.jsx'
+
+
 
 function App() {
   return (
@@ -7,10 +11,9 @@ function App() {
       padding: 0,
       width: '100vw',
       height: '100vh',
-      overflow: 'hidden',        // Prevent any scroll on app wrapper
-      backgroundColor: '#1a1a1a' // Match chart background
+      overflow: 'auto'
     }}>
-      <KPIChart2 />
+      <Table2 />
     </div>
   )
 }
