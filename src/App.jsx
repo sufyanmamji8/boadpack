@@ -1,6 +1,7 @@
 import Table1 from './Tables/table1.jsx'
 import Table2 from './Tables/table2.jsx'
 import Table3 from './Tables/table3.jsx'
+import JeddahAirportDiagram from './pages/JeddahAirportDiagram.jsx'
 
 
 
@@ -13,7 +14,7 @@ function App() {
       height: '100vh',
       overflow: 'auto'
     }}>
-      <Table2 />
+      <JeddahAirportDiagram/>
     </div>
   )
 }
