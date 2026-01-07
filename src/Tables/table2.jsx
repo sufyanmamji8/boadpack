@@ -1,25 +1,43 @@
 import React from 'react';
+import airportLogo from '../assets/top.png';
+import lshapeImage from '../assets/Lshape.png';
+import top2 from '../assets/top2.png';
 
 const Table2 = () => {
   return (
     <div className="min-h-screen bg-white p-4 md:p-6 lg:p-8" style={{ fontFamily: 'Arial, sans-serif' }}>
       {/* Header */}
-      <div className="text-center mb-6 md:mb-8 lg:mb-10 pt-4 md:pt-6">
+      <div className="text-center mb-6 md:mb-8 lg:mb-10 pt-4 md:pt-6 relative flex items-center justify-center">
+        <img src={airportLogo} alt="Jeddah Airport Logo" className="absolute left-0 top-[-10] h-12 w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 object-contain" />
         <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-black">
           Jeddah Airport Parking Profile
         </h1>
+        <img src={lshapeImage} alt="Lshape" className="absolute right-0 top-[-10] h-8 w-8 md:h-10 md:w-10 lg:h-12 lg:w-12 object-contain" />
       </div>
       <div className='border-2 p-4'>
-
 
       <div className="flex flex-col lg:flex-row gap-4 md:gap-6 lg:gap-8">
         {/* Left Column */}
       <div className="lg:flex-1">
           {/* Top Left Information Block */}
-           <div className="flex items-center gap-2 mb-3 ">
-      <div className="w-3 h-3 rounded-full bg-red-500"></div>
-      <span className="text-gray-800 font-medium text-sm ">Assets Deployed</span>
+           <div className="flex items-start bg-white p-2 md:p-3 mb-2 md:mb-3 w-full lg:w-auto">
+    {/* Image Container */}
+    <div className="hidden md:block flex-shrink-0 mr-0 mt-[-24px] mt-1">
+      <img 
+        src={top2}
+        alt="Jeddah Airport Car Park"
+        className="w-16 h-16 md:w-20 md:h-20 object-contain"
+      />
     </div>
+    
+    {/* Information Content */}
+    <div className="flex-1">
+      <div className="flex items-center gap-2 mb-3 ">
+        <div className="w-3 h-3 rounded-full bg-red-500"></div>
+        <span className="text-gray-800 font-medium text-sm ">Assets Deployed</span>
+      </div>
+    </div>
+  </div>
  
 
           {/* Top Tables Container */}
