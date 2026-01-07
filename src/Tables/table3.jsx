@@ -28,9 +28,9 @@ const Table3 = () => {
             </div>
           
             {/* Image and Assets deployed section */}
-            <div className="flex items-start bg-white p-2 md:p-3 mb-2 md:mb-3 w-full lg:w-auto">
+            <div className="flex items-start bg-white p-2 mt-[-50px] mr-10 md:p-3 mb-2 md:mb-3 w-full lg:w-auto">
               {/* Image Container */}
-              <div className="hidden md:block flex-shrink-0 mr-0 mt-[-12px] mt-1">
+              <div className="hidden md:block flex-shrink-0 mr-0 mt-[-12px]">
                 <img 
                   src={top2}
                   alt="Jeddah Airport Enforcement"
@@ -42,7 +42,7 @@ const Table3 = () => {
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-0">
                   <div className="w-3 h-3 rounded-full bg-red-500 mt-4"></div>
-                  <span className="text-gray-800 mt-4 font-medium text-sm">Assets deployed</span>
+                  <span className="text-gray-800 font-medium text-sm mt-4">Assets deployed</span>
                 </div>
               </div>
             </div>
@@ -320,7 +320,7 @@ const Table3 = () => {
           </div>
 
           {/* Right Side Panel - Assets Deployed */}
-          <div className="w-full lg:w-[280px] mt-0 lg:mt-32 self-start">
+          <div className="w-full lg:w-[280px] mt-0 lg:mt-20 self-start">
             <div className="flex flex-col bg-white border border-black h-full">
               {/* Header Section */}
               <div className="bg-[#003d7a] text-white p-1 text-[8px] font-bold flex items-center gap-1 border-b border-black">
