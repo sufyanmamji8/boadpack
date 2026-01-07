@@ -2,19 +2,18 @@ import React from "react";
 
 function JeddahAirportDiagram() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
-   <div className="relative flex items-center gap-x-16">
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center">
+
+      <div className="relative flex items-center gap-x-16">
         
-        {/* LEFT: Jeddah Airport */}
-        <div className="bg-[#006fc0] text-white rounded-xl px-12 py-8 shadow-lg text-center">
+        <div className="bg-[#006fc0] text-white rounded-xl px-16 py-6 shadow-lg text-center">
           <h1 className="text-3xl leading-tight">
             Jeddah<br />Airport
           </h1>
         </div>
 
-        {/* SVG ARROWS */}
         <svg
-          className="absolute left-[200px] top-1/2 -translate-y-1/2"
+          className="absolute left-[220px] top-1/2 -translate-y-1/2"
           width="220"
           height="360"
           viewBox="0 0 220 360"
@@ -29,49 +28,52 @@ function JeddahAirportDiagram() {
               refY="4"
               orient="auto"
             >
-              <path d="M0 0 L8 4 L0 8 Z" fill="#7dc4e8" />
+              <path d="M0 0 L8 4 L0 8 Z" fill="#006fc0" />
             </marker>
           </defs>
 
-          {/* Upper arrow */}
           <line
             x1="0"
             y1="180"
             x2="200"
             y2="40"
-            stroke="#7dc4e8"
+            stroke="#006fc0"
             strokeWidth="2"
             markerEnd="url(#arrow)"
           />
 
-          {/* Lower arrow */}
           <line
             x1="0"
             y1="180"
             x2="200"
             y2="320"
-            stroke="#7dc4e8"
+            stroke="#006fc0"
             strokeWidth="2"
             markerEnd="url(#arrow)"
           />
         </svg>
 
-        {/* RIGHT: Parking + Enforcement */}
-<div className="flex flex-col gap-y-32 gap-x-32 ml-38">
-  <div className="bg-[#006fc0] text-white rounded-xl px-12 py-8 shadow-lg text-center min-w-[500px] max-w-[600px] w-full">
-    <h1 className="text-4xl font-normal leading-tight tracking-wider">
-      Jeddah Airport<br />Parking
-    </h1>
-  </div>
+        <div className="flex flex-col gap-y-32 ml-34">
+          <div className="bg-[#006fc0] text-white rounded-xl px-8 py-4 shadow-lg text-center min-w-[500px] max-w-[600px] w-full">
+            <h1 className="text-4xl font-normal leading-tight tracking-wider">
+              Jeddah Airport<br />Parking
+            </h1>
+          </div>
 
-  <div className="bg-[#006fc0] text-white rounded-xl px-12 py-8 shadow-lg text-center min-w-[500px] max-w-[600px] w-full">
-    <h1 className="text-4xl font-normal leading-tight tracking-wider">
-      Jeddah Airport<br />Enforcement
-    </h1>
-  </div>
-</div>
-
+          <div className="bg-[#006fc0] text-white rounded-xl px-8 py-4 shadow-lg text-center min-w-[500px] max-w-[600px] w-full">
+            <h1 className="text-4xl font-normal leading-tight tracking-wider">
+              Jeddah Airport<br />Enforcement
+            </h1>
+          </div>
+        </div>
       </div>
+
+      {/* ===== NOTE (FIXED) ===== */}
+      <div className="mt-36 px-4 mr-76  max-w-4xl text-xs md:text-sm text-gray-600 text-left">
+        <strong>Note:</strong> Numbers have been rounded up to the nearest value
+        and thus there may be rounding errors when comparing the variances.
+      </div>
+
     </div>
   );
 }

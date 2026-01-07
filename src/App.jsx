@@ -14,7 +14,10 @@ function App() {
       height: '100vh',
       overflow: 'auto'
     }}>
-      <JeddahAirportDiagram/>
+      <Table1 />
+      <Table2 />
+      <Table3 />
+
     </div>
   )
 }
