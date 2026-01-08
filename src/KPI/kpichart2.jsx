@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as echarts from 'echarts';
+import { CHART_COLORS } from '../constants';
+
 
 const KPIChart2 = () => {
   const chartRef = useRef(null);
@@ -317,15 +319,89 @@ const KPIChart2 = () => {
   }, []);
 
   return (
-    <div
-      ref={chartRef}
-      style={{
-        width: '100%',
-        height: '100vh',          // Full viewport height for single-page display
-        backgroundColor: '#1a1a1a',
-        position: 'relative'
-      }}
-    />
+    <div style={{ backgroundColor: '#1a1a1a', padding: '20px' }}>
+      <div
+        ref={chartRef}
+        style={{
+          width: '100%',
+          height: '100vh',
+          position: 'relative'
+        }}
+      />
+      
+      {/* Render the custom table component */}
+      <CustomTableContainer />
+    </div>
+  );
+};
+
+// Additional component for custom table placement
+const CustomTableContainer = () => {
+  return (
+    <div style={{ marginTop: "30px", color: CHART_COLORS.text }}>
+      <table style={{ margin: "0 auto", width:'100%', borderCollapse: "collapse", fontSize: "13px", textAlign: "center" }}>
+        <thead>
+          <tr>
+            <th
+              style={{
+                padding: "8px",
+                backgroundColor: CHART_COLORS.primary,
+                color: CHART_COLORS.table.headerText,
+              }}
+            >
+              Deployed to Employed - Clamp Drivers
+            </th>
+            {["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"].map(
+              (month) => (
+                <th
+                  key={month}
+                  style={{
+                    padding: "8px",
+                    backgroundColor: CHART_COLORS.primary,
+                    border: `1px solid ${CHART_COLORS.primary}`,
+                    color: CHART_COLORS.table.headerText,
+                  }}
+                >
+                  {month}
+                </th>
+              )
+            )}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}`, backgroundColor: CHART_COLORS.primary }}>2024</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>91%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>70%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>77%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>69%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>82%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>64%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>78%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>89%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>90%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>73%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>89%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>72%</td>
+          </tr>
+          <tr>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}`, background: CHART_COLORS.primary }}>2025</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>83%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>81%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>77%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>61%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>65%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>73%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>81%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>76%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>73%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>64%</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>-</td>
+            <td style={{ padding: "8px", border: `1px solid ${CHART_COLORS.table.border}` }}>-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 
