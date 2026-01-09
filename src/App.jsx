@@ -10,6 +10,7 @@ import File5 from './Tables/file5.jsx'
 import KPIChart from './KPI/kpichart.jsx'
 import KPIChart2 from './KPI/kpichart2.jsx'
 import JeddahAirportKPIChart from './KPI/JeddahAirportKPIChart.jsx'
+import KPIchart4  from './KPI/KPIchart4.jsx'
 
 
 
@@ -31,8 +32,11 @@ function App() {
       <File4/>
       <File5/> */}
 <JeddahAirportKPIChart/>
-{/* <KPIChart/> */}
-{/* <KPIChart2/> */}
+<KPIChart/>
+<KPIChart2/>
+
+{/* <KPIchart4/> */}
+
 
     </div>
   )

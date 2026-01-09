@@ -183,7 +183,7 @@ const KPIChart = () => {
             position: 'top',
             color: '#fff',
             backgroundColor: '#1a1a1a',
-            borderColor: '#00bfff',
+            borderColor: '#9acd32',
             borderWidth: 1,
             padding: [2, 3],
             borderRadius: 2,
@@ -244,6 +244,17 @@ const KPIChart = () => {
                 fill: '#fff',
                 fontSize: 8
               }
+            },
+            {
+              type: 'text',
+              left: 40,
+              top: -7,
+              style: {
+                text: '6',
+                fill: '#fff',
+                fontSize: 8,
+                fontWeight: 'bold'
+              }
             }
           ]
         },
@@ -301,6 +312,7 @@ const KPIChart = () => {
             }
           ]
         }
+        
       ]
     };
 
@@ -321,6 +333,7 @@ const KPIChart = () => {
       font-size: 8px;
       color: #fff;
       overflow-x: auto;
+      
       max-height: 100px;
     `;
 
@@ -372,6 +385,7 @@ return (
       height: '100%',    // Change from 100vh
       backgroundColor: '#cc3838',  // Match the page background (red)
       position: 'relative',
+      marginBottom: '50px',
     }}
   />
 );
